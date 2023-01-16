@@ -102,5 +102,5 @@ const links = [
   { href: "/coming-soon", label: "Blog" },
   { href: "/coming-soon", label: "Projects" },
   // { href: "/coming-soon", label: "Library" },
-  { href: "/coming-soon", label: "About" },
+  { href: "/about", label: "About" },
 ];
