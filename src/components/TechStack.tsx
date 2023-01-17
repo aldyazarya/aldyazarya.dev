@@ -129,16 +129,16 @@ const stacks = [
       </>
     ),
   },
-  {
-    id: "docker",
-    icon: SiDocker,
-    tooltip: (
-      <>
-        <CustomLink href="https://www.docker.com/">Docker</CustomLink>, dude,
-        you have to use it !
-      </>
-    ),
-  },
+  // {
+  //   id: "docker",
+  //   icon: SiDocker,
+  //   tooltip: (
+  //     <>
+  //       <CustomLink href="https://www.docker.com/">Docker</CustomLink>, dude,
+  //       you have to use it !
+  //     </>
+  //   ),
+  // },
   {
     id: "solidity",
     icon: SiSolidity,
