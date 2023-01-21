@@ -40,7 +40,7 @@ export default function BlogCard({ post, className, onClick }: BlogCardProps) {
       >
         <div className="relative">
           <Image
-            src={`${baseImageUrl}${post.attributes.banner.data.attributes.formats.thumbnail.url}`}
+            src={`${baseImageUrl}${post.attributes.banner.data.attributes.formats.medium.url}`}
             alt={post.attributes.banner.data.attributes.alternativeText}
             width={1200}
             height={(1200 * 3) / 5}

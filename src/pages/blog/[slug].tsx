@@ -28,9 +28,7 @@ type Data = {
   data: any;
 };
 
-type Article = {
-  attributes: any;
-};
+
 
 export default function SingleBlogPage({
   dataSlug,
@@ -121,7 +119,7 @@ export default function SingleBlogPage({
                   src={`${baseImageUrl}${article.banner.data.attributes.url}`}
                   alt={article.banner.data.attributes.alternativeText}
                   width={1200}
-                  height={(1200 * 2) / 5}
+                  height={(1200 * 3) / 5}
                 />
 
                 <h1 className="mt-4">{article.title}</h1>
