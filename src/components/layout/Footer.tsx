@@ -143,7 +143,7 @@ const footerLinks = [
   //   tooltip: "Blog, Projects, and Library Statistics",
   // },
   {
-    href: "/coming-soon",
+    href: "/guestbook",
     text: "Guestbook",
     tooltip:
       "Leave whatever you like to say—message, appreciation, suggestions",

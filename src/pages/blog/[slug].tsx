@@ -28,11 +28,8 @@ type Data = {
   data: any;
 };
 
-
-
 export default function SingleBlogPage({
   dataSlug,
-  dataOtherPost,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { asPath } = useRouter();
   const router = useRouter();
@@ -45,12 +42,12 @@ export default function SingleBlogPage({
   const urlSite = `${origin}`;
 
   const article = dataSlug.data.attributes;
-  const otherPost = dataOtherPost.data;
+  const relatedPost = dataSlug.data.attributes?.relatedPosts?.data;
   const baseImageUrl = process.env.NEXT_API_DOMAIN;
 
   console.log("====================================");
   console.log("article", article);
-  console.log("other", otherPost);
+  console.log("related", relatedPost);
   console.log("url", urlSite);
   console.log("====================================");
 
@@ -104,10 +101,10 @@ export default function SingleBlogPage({
     <>
       <Layout>
         <Seo
-          templateTitle={article.title}
-          description={article.description}
+          templateTitle={article.seo.metaTitle}
+          description={article.seo.metaDescription}
           isBlog
-          banner={`${baseImageUrl}${article.banner.data.attributes.url}`}
+          banner={`${baseImageUrl}${article.seo.metaImage.media.data.attributes.formats.medium.url}`}
           date={new Date(article.publishedAt).toISOString()}
         />
         <main>
@@ -184,13 +181,13 @@ export default function SingleBlogPage({
                   <Comment key={article.slug} />
                 </figure> */}
 
-                {otherPost.length > 0 && (
+                {relatedPost.length > 0 && (
                   <div className="mt-20">
                     <h2>
                       <Accent>Other posts that you might like</Accent>
                     </h2>
                     <ul className="mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                      {otherPost.map((post: any, i: any) => {
+                      {relatedPost?.map((post: any, i: any) => {
                         return (
                           <BlogCard
                             key={post.slug}
@@ -217,7 +214,6 @@ export default function SingleBlogPage({
 
 export const getServerSideProps: GetServerSideProps<{
   dataSlug: Data;
-  dataOtherPost: Data;
 }> = async (context) => {
   const { slug } = context.query;
   const token = process.env.NEXT_API_TOKEN_GET_POSTS;
@@ -231,24 +227,11 @@ export const getServerSideProps: GetServerSideProps<{
     method: "GET",
   });
 
-  const responseOtherPost = await fetch(
-    `${baseUrl}/api/posts?populate=*&sort=updatedAt`,
-    {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      method: "GET",
-    }
-  );
-
   const dataSlug: Data = await responseSlug.json();
-  const dataOtherPost: Data = await responseOtherPost.json();
 
   return {
     props: {
       dataSlug,
-      dataOtherPost,
     }, // will be passed to the page component as props
   };
 };

@@ -82,7 +82,7 @@ export default function Home({
                 data-fade="4"
               >
                 Don&apos;t forget to sign my{" "}
-                <CustomLink href="/coming-soon">guestbook</CustomLink>!
+                <CustomLink href="/guestbook">guestbook</CustomLink>!
               </p>
               <div
                 data-fade="5"
