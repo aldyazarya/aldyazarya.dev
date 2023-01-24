@@ -97,7 +97,7 @@ export default function Home({
                       "opacity-75 transition duration-1000 group-hover:opacity-100 group-hover:duration-200"
                     )}
                   />
-                  <ButtonLink href="/coming-soon">Read the blog</ButtonLink>
+                  <ButtonLink href="/blog">Read the blog</ButtonLink>
                 </div>
                 <ButtonLink href="/about">Learn more about me</ButtonLink>
               </div>

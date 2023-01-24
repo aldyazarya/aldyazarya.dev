@@ -19,6 +19,7 @@ module.exports = {
   },
   env: {
     NEXT_API_DOMAIN: "https://aldyazarya-strapi.herokuapp.com",
+    NEXT_SITE_URL: "https://aldyazarya.vercel.app/",
     NEXT_API_TOKEN_GUESTBOOKS:
       "a4b3dd15774efc2ff3725b5718d2f4316c1553a0a6ca4848f7f40f9b6b16feda550f0613b331bf2ed5f377ba16d995e35d50d8c34fc21db5ad7baf61c6f279397c5cfb12747e794ff288be866e4dc70742b39a8d41c0fdbec5657ae6c373a5e098d8c25fa95a9e4b7bed6e07d2208487daf732f6741130acd3e7b18c7b69aae5",
     NEXT_API_TOKEN_GET_POSTS:
