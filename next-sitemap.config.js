@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.NEXT_SITE_URL || "https://aldyazarya.vercel.app/",
+  siteUrl: process.env.NEXT_SITE_URL || "https://aldyazarya.dev",
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [

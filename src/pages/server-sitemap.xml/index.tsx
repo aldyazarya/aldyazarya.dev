@@ -42,7 +42,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
   // posts.
 
-  const siteUrl = process.env.NEXT_SITE_URL || "https://aldyazarya.vercel.app";
+  const siteUrl = process.env.NEXT_SITE_URL || "https://aldyazarya.dev";
 
   const fields: ISitemapField[] = posts.data.map((item: any) => ({
     loc: `${siteUrl}/blog/${item.attributes.slug}`,

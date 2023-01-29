@@ -1,4 +1,4 @@
-const siteUrl = process.env.NEXT_SITE_URL || "https://aldyazarya.vercel.app";
+const siteUrl = process.env.NEXT_SITE_URL || "https://aldyazarya.dev";
 
 const toLowerCase = (val: any) => {
   return val.toLowerCase();
