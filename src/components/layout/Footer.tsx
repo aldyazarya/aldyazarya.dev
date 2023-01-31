@@ -198,7 +198,7 @@ const socials = [
     id: "Instagram",
     text: (
       <>
-        I post updates my daily activity on this account. Follow me on{" "}
+        I updates my daily activity on this account. Follow me on{" "}
         <Accent className="font-medium">Instagram</Accent>!
       </>
     ),
