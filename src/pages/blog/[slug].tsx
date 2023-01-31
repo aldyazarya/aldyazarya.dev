@@ -106,6 +106,7 @@ export default function SingleBlogPage({
           isBlog={true}
           banner={`${baseImageUrl}${article.seo.metaImage.media.data.attributes.formats.medium.url}`}
           date={new Date(article.publishedAt).toISOString()}
+          templateKeywords={article.keywords}
         />
         <main>
           <ReloadDevtool />
