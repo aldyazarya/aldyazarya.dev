@@ -2,7 +2,7 @@ import { FeedbackFish } from "@feedback-fish/react";
 import * as React from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { FiMail } from "react-icons/fi";
-import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
+import { SiGithub, SiLinkedin, SiTwitter, SiInstagram } from "react-icons/si";
 import { Tooltip as TooltipTippy } from "react-tippy";
 
 import Accent from "@/components/Accent";
@@ -189,6 +189,17 @@ const socials = [
       <>
         I post updates, tips, insight, and sometimes do some talk. Follow me on{" "}
         <Accent className="font-medium">Twitter</Accent>!
+      </>
+    ),
+  },
+  {
+    href: "https://instagram.com/aldyazaryaaa",
+    icon: SiInstagram,
+    id: "Instagram",
+    text: (
+      <>
+        I post updates my daily on this account. Follow me on{" "}
+        <Accent className="font-medium">Instagram</Accent>!
       </>
     ),
   },
