@@ -32,6 +32,8 @@ export default function Seo(props: SeoProps) {
   // Use siteName if there is templateTitle
   // but show full title if there is none
 
+  const { isBlog, banner } = props;
+
   return (
     <Head>
       <title>{meta.title}</title>
@@ -47,7 +49,9 @@ export default function Seo(props: SeoProps) {
       <meta
         name="image"
         property="og:image"
-        content="https://i.ibb.co/j37mBGy/logo-website.png"
+        content={`${
+          isBlog === true ? banner : "https://i.ibb.co/j37mBGy/logo-website.png"
+        }`}
       />
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -56,7 +60,9 @@ export default function Seo(props: SeoProps) {
       <meta name="twitter:description" content={meta.description} />
       <meta
         name="twitter:image"
-        content="https://i.ibb.co/j37mBGy/logo-website.png"
+        content={`${
+          isBlog === true ? banner : "https://i.ibb.co/j37mBGy/logo-website.png"
+        }`}
       />
       {meta.date && (
         <>

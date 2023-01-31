@@ -103,7 +103,7 @@ export default function SingleBlogPage({
         <Seo
           templateTitle={article.seo.metaTitle}
           description={article.seo.metaDescription}
-          isBlog
+          isBlog={true}
           banner={`${baseImageUrl}${article.seo.metaImage.media.data.attributes.formats.medium.url}`}
           date={new Date(article.publishedAt).toISOString()}
         />
@@ -173,7 +173,7 @@ export default function SingleBlogPage({
 
                 <ShareTweetButton
                   className="mt-12"
-                  url={`${urlSite}/blog/${article.slug}`}
+                  url={`https://aldyazarya.dev/blog/${article.slug}`}
                   title={article.title}
                 />
 
