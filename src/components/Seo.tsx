@@ -3,13 +3,14 @@ import { useRouter } from "next/router";
 
 const defaultMeta = {
   title: "Aldy Azarya",
-  siteName: "aldyazarya.com",
+  siteName: "aldyazarya.dev",
   description:
     "An online portfolio and blog by Aldy Azarya. Showcase of my projects, and some of my thoughts about website development.",
   url: "https://aldyazarya.com",
   image: "https://aldyazarya.com/favicon/large-og.png",
   type: "website",
   robots: "follow, index",
+  keywords: "aldy, aldyazarya, aldy azarya",
 };
 
 type SeoProps = {
@@ -17,6 +18,7 @@ type SeoProps = {
   templateTitle?: string;
   isBlog?: boolean;
   banner?: string;
+  templateKeywords?: string;
 } & Partial<typeof defaultMeta>;
 
 export default function Seo(props: SeoProps) {
@@ -37,17 +39,31 @@ export default function Seo(props: SeoProps) {
       <title>{meta.title}</title>
       <meta name="robots" content={meta.robots} />
       <meta content={meta.description} name="description" />
+      <meta
+        name="keywords"
+        content={meta.isBlog === true ? meta.templateKeywords : meta.keywords}
+      />
       <meta property="og:url" content={`${meta.url}${router.asPath}`} />
       <link rel="canonical" href={`${meta.url}${router.asPath}`} />
       {/* Open Graph */}
-      <meta property="og:type" content={meta.type} />
+      <meta
+        property="og:type"
+        content={meta.isBlog === true ? "article" : meta.type}
+      />
       <meta property="og:site_name" content={meta.siteName} />
       <meta property="og:description" content={meta.description} />
-      <meta property="og:title" content={meta.title} />
+      <meta
+        property="og:title"
+        content={meta.isBlog === true ? meta.templateTitle : meta.title}
+      />
       <meta
         name="image"
         property="og:image"
-        content="https://i.ibb.co/j37mBGy/logo-website.png"
+        content={`${
+          meta.isBlog === true
+            ? meta.banner
+            : "https://i.ibb.co/j37mBGy/logo-website.png"
+        }`}
       />
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -56,7 +72,11 @@ export default function Seo(props: SeoProps) {
       <meta name="twitter:description" content={meta.description} />
       <meta
         name="twitter:image"
-        content="https://i.ibb.co/j37mBGy/logo-website.png"
+        content={`${
+          meta.isBlog === true
+            ? meta.banner
+            : "https://i.ibb.co/j37mBGy/logo-website.png"
+        }`}
       />
       {meta.date && (
         <>
