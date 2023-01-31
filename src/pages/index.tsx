@@ -10,7 +10,7 @@ import useLoaded from "@/hooks/useLoaded";
 
 import { IoArrowDownOutline } from "react-icons/io5";
 import { IoNewspaperSharp } from "react-icons/io5";
-import { SiGithub, SiTwitter } from "react-icons/si";
+import { SiGithub, SiTwitter, SiInstagram } from "react-icons/si";
 import svgBackground from "public/images/svg-background.svg";
 
 import UnstyledLink from "@/components/links/UnstyledLink";
@@ -34,15 +34,19 @@ export default function Home({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const isLoaded = useLoaded();
 
-  console.log("====================================");
-  console.log("article", dataIntroPost);
-  console.log("other", dataLatestPost);
-  console.log("project", dataLatestProject);
-  console.log("====================================");
+  // console.log("====================================");
+  // console.log("article", dataIntroPost);
+  // console.log("other", dataLatestPost);
+  // console.log("project", dataLatestProject);
+  // console.log("====================================");
 
   const introPost = dataIntroPost.data;
   const latestPost = dataLatestPost.data;
   const latestProject = dataLatestProject.data;
+
+  console.log("====================================");
+  console.log("intro post", introPost);
+  console.log("====================================");
 
   return (
     <>
@@ -118,7 +122,7 @@ export default function Home({
                   <span>Resume</span>
                 </UnstyledLink>
                 <UnstyledLink
-                  href="https://twitter.com/aldyazarya"
+                  href="https://www.instagram.com/aldyazaryaaa"
                   className={clsx(
                     "inline-flex items-center gap-1 text-sm font-medium md:text-base",
                     "group text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white",
@@ -126,8 +130,8 @@ export default function Home({
                     "transition-colors"
                   )}
                 >
-                  <SiTwitter className="shrink-0 transition-colors group-hover:text-[#1da1f2]" />
-                  <span>@aldyazarya</span>
+                  <SiInstagram className="shrink-0 transition-colors group-hover:text-[#1da1f2]" />
+                  <span>@aldyazaryaaa</span>
                 </UnstyledLink>
                 <UnstyledLink
                   href="https://github.com/aldyazarya"
@@ -182,7 +186,7 @@ export default function Home({
                   <div className="mt-8 h-full w-full md:mt-0">
                     <h2 className="text-4xl md:text-6xl">
                       <Accent className="inline decoration-clone leading-snug dark:leading-none">
-                        Lorem ipsum dolor sit
+                        Conceptual Model Is A Basic
                       </Accent>
                     </h2>
                     <p className="mt-4 text-base text-gray-600 dark:text-gray-300 md:text-lg">
@@ -190,21 +194,24 @@ export default function Home({
                         withUnderline
                         content={
                           <>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
+                            A conceptual model in UI design refers to a
+                            representation of the user&apos;s mental model of a
+                            system, which helps to guide the design process. It
+                            defines the relationships between the user, the
+                            system, and the tasks they perform, and serves as a
+                            blueprint for creating a user-centered interface.
                           </>
                         }
                       >
-                        Lorem ipsum
+                        Conceptual Model
                       </Tooltip>{" "}
-                      dolor sit amet, consectetur adipiscing elit,{" "}
+                      is an abstract representation of the information
+                      architecture, user flows, and visual design of the
+                      application, and serves as a
                       <strong className="text-gray-700 dark:text-gray-200">
-                        sed do
+                        blueprint
                       </strong>{" "}
-                      eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat
+                      for development.
                     </p>
                   </div>
                   <div className="h-full w-full">
