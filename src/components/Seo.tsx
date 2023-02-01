@@ -5,12 +5,12 @@ const defaultMeta = {
   title: "Aldy Azarya",
   siteName: "aldyazarya.dev",
   description:
-    "An online portfolio and blog by Aldy Azarya. Showcase of my projects, and some of my thoughts about website development.",
-  url: "https://aldyazarya.com",
-  image: "https://aldyazarya.com/favicon/large-og.png",
+    "An online portfolio and blog by Aldy Azarya. Showcase of my projects, and some of my thoughts about web development and UI design.",
+  url: "https://aldyazarya.dev",
+  image: "https://i.ibb.co/j37mBGy/logo-website.png",
   type: "website",
   robots: "follow, index",
-  keywords: "aldy, aldyazarya, aldy azarya",
+  keywords: "aldy, aldyazarya, aldy azarya, azarya",
 };
 
 type SeoProps = {
