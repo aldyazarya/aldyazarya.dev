@@ -16,7 +16,15 @@ export default function DesignPage() {
 
   return (
     <Layout>
-      <Seo templateTitle="Design" />
+            <Seo
+        templateTitle={"Design"}
+        description={
+          "In this website I will be writing some blogs and showcase my projects. I believe that writing what I have learned is the best way to remember things, and I can share my knowledge along the way. So do contact me and I will be very happy to help!"
+        }
+        keywords={
+          "design, aldy azarya design, aldyazarya design, aldy design, azarya design, design"
+        }
+      />
 
       <main>
         <section className={clsx(isLoaded && "fade-in-start")}>

@@ -67,6 +67,9 @@ export default function GuestbookPage() {
       <Seo
         templateTitle="Guestbook"
         description="Leave whatever you like to say—message, appreciation, suggestions."
+        keywords={
+          "guestbook, aldy azarya guestbook, aldyazarya guestbook, aldy guestbook, azarya guestbook, showcase guestbook"
+        }
       />
       <main>
         <section className="">

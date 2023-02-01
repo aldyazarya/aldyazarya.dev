@@ -30,7 +30,15 @@ export default function Projects({
   return (
     <>
       <Layout>
-        <Seo />
+        <Seo
+          templateTitle={"Projects"}
+          description={
+            "Showcase of my works on frontend developments and UI design"
+          }
+          keywords={
+            "projects, aldy azarya projects, aldyazarya projects, aldy projects, azarya projects, showcase projects"
+          }
+        />
         <main>
           <section className={clsx(isLoaded && "fade-in-start")}>
             <div className="layout py-12">

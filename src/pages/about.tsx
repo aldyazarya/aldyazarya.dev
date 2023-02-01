@@ -15,7 +15,15 @@ export default function AboutPage() {
 
   return (
     <Layout>
-      <Seo />
+      <Seo
+        templateTitle={"About"}
+        description={
+          "In this website I will be writing some blogs and showcase my projects. I believe that writing what I have learned is the best way to remember things, and I can share my knowledge along the way. So do contact me and I will be very happy to help!"
+        }
+        keywords={
+          "about, aldy azarya about, aldyazarya about, aldy about, azarya about, about"
+        }
+      />
       <main>
         <section className={clsx(isLoaded && "fade-in-start")}>
           <div className="layout min-h-main py-20">

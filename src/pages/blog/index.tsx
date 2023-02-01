@@ -98,7 +98,15 @@ export default function Blog() {
   return (
     <>
       <Layout>
-        <Seo />
+        <Seo
+          templateTitle={"Blog"}
+          description={
+            "Conceptual Model is an abstract representation of the information architecture, user flows, and visual design of the application, and serves as ablueprint for development."
+          }
+          keywords={
+            "blog, aldy azarya blog, aldyazarya blog, aldy blog, azarya blog"
+          }
+        />
         <main>
           <section className={clsx(isLoaded && "fade-in-start")}>
             <div className="layout py-12">
