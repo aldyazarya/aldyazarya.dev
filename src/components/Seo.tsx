@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const defaultMeta = {
-  title: "Aldy Azarya",
+  title: "Website Portfolio by Aldy Azarya",
   siteName: "aldyazarya.dev",
   description:
     "An online portfolio and blog by Aldy Azarya. Showcase of my projects, and some of my thoughts about web development and UI design.",
