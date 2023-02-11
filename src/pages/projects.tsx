@@ -12,6 +12,8 @@ import Seo from "@/components/Seo";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import TechIcons, { TechListType } from "@/components/TechIcons";
 
+import sideProjectBanner from 'public/images/side-projects.png'
+
 type Data = {
   data: any;
 };
@@ -87,7 +89,7 @@ export default function Projects({
                     </div>
                     <Image
                       className=" rounded-md"
-                      src={`${baseImageUrl}${sideProject.banner.url}`}
+                      src={sideProjectBanner}
                       alt={sideProject.banner.alternativeText}
                       width={1200}
                       height={(1200 * 3) / 5}
@@ -114,7 +116,7 @@ const sideProject = {
   stack: "nextjs,tailwindcss",
   banner: {
     alternativeText: "side-project",
-    url: "/uploads/side_projects_22ebc65da6.png",
+    url: "/uploads/side-projects.png",
   },
 };
 
